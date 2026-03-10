@@ -24,6 +24,11 @@ const features = [
 function FeaturesSection() {
   return (
     <section className="feature-strip" aria-label="service-highlights">
+      <h2 className="feature-heading">
+        Built for Fast, Compliant
+        <br />
+        and Scalable Operations
+      </h2>
       {features.map((feature) => (
         <article key={feature.title}>
           <div className="feature-icon">

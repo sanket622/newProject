@@ -3,7 +3,17 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.4rem;
   padding: clamp(2rem, 4vw, 4rem) clamp(1rem, 4vw, 6rem);
-  background: #060606;
+  background: transparent;
+}
+
+.feature-heading {
+  grid-column: 1 / -1;
+  margin: 0 0 0.8rem;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.6rem, 3.2vw, 3rem);
+  line-height: 1.2;
+  color: #111111;
 }
 
 .feature-strip article {

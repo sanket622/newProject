@@ -1,8 +1,8 @@
 import './StepsSection.css'
-import frame33 from '../../assets/Frame 33 (2).png'
-import frame34 from '../../assets/Frame 34.png'
-import frame35 from '../../assets/Frame 35.png'
-import frame36 from '../../assets/Frame 36.png'
+import frame33 from '../../../assets/Frame 33 (2).png'
+import frame34 from '../../../assets/Frame 34.png'
+import frame35 from '../../../assets/Frame 35.png'
+import frame36 from '../../../assets/Frame 36.png'
 
 function StepsSection() {
   return (

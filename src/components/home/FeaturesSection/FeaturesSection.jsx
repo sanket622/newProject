@@ -1,7 +1,7 @@
 import './FeaturesSection.css'
-import frame35 from '../../assets/Frame 35.png'
-import frame33 from '../../assets/Frame 33.png'
-import frame331 from '../../assets/Frame 33 (1).png'
+import frame35 from '../../../assets/Frame 35.png'
+import frame33 from '../../../assets/Frame 33.png'
+import frame331 from '../../../assets/Frame 33 (1).png'
 
 const features = [
   {

@@ -1,3 +1,5 @@
+import './Pages.css'
+
 function AboutPage() {
   return (
     <section className="inner-page paper-bg">

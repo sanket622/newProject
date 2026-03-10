@@ -1,12 +1,1 @@
-html,
-body,
-#root {
-  margin: 0;
-  width: 100%;
-  min-height: 100%;
-}
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #efeff0;
-}
+/* Global common styles are in src/styles/common.css */

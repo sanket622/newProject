@@ -1,0 +1,46 @@
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  padding: clamp(2rem, 4vw, 4rem) clamp(1rem, 4vw, 6rem) clamp(2rem, 5vw, 4.5rem);
+}
+
+.stats article {
+  text-align: center;
+  padding: 0 1rem;
+  border-right: 1px solid #b478cb;
+}
+
+.stats article:last-child {
+  border-right: 0;
+}
+
+.stats h3 {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2rem, 3.3vw, 3.8rem);
+  color: var(--primary);
+}
+
+.stats p {
+  margin: 0.7rem auto 0;
+  max-width: 280px;
+  font-size: clamp(1rem, 1.35vw, 1.8rem);
+}
+
+@media (max-width: 780px) {
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 1.3rem;
+  }
+
+  .stats article {
+    border-right: 0;
+    border-bottom: 1px solid #b478cb;
+    padding-bottom: 1.1rem;
+  }
+
+  .stats article:last-child {
+    border-bottom: 0;
+  }
+}

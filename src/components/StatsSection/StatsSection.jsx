@@ -1,3 +1,5 @@
+import './StatsSection.css'
+
 const metrics = [
   { value: '75000 +', text: 'Happy customers who got their loans' },
   { value: '99.2%', text: 'Customer Satisfaction Rate' },

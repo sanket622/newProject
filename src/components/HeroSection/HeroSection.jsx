@@ -1,3 +1,5 @@
+import './HeroSection.css'
+
 function HeroSection() {
   return (
     <section className="hero grid-bg">

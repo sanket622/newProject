@@ -1,3 +1,5 @@
+import './Pages.css'
+
 function LendingPage() {
   return (
     <section className="inner-page">

@@ -1,0 +1,122 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(1.5rem, 3vw, 3rem);
+  padding: clamp(2.5rem, 6vw, 5rem) clamp(1rem, 4vw, 6rem) 2.5rem;
+}
+
+.hero-copy {
+  max-width: 760px;
+  padding-top: 2rem;
+}
+
+.pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-bottom: 1.6rem;
+}
+
+.pill-row span {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  border-radius: 999px;
+  padding: 0.45rem 1rem;
+  font-size: 1.06rem;
+}
+
+.hero-copy h1 {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.25rem, 5.8vw, 5rem);
+  line-height: 1.04;
+}
+
+.hero-copy p {
+  margin-top: 1.3rem;
+  max-width: 720px;
+  font-size: clamp(1.02rem, 1.7vw, 2rem);
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-top: 2.2rem;
+}
+
+.loan-card {
+  border-radius: 24px;
+  background: linear-gradient(135deg, #f2f2f4 0%, #ece7ef 70%, #c185d8 100%);
+  border: 1px solid #c8c8cd;
+  box-shadow: 0 12px 38px rgba(0, 0, 0, 0.15);
+  padding: 1.4rem;
+}
+
+.loan-card h2 {
+  margin: 0;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.8rem, 2.4vw, 2.8rem);
+}
+
+.loan-card > p {
+  margin: 0.7rem 0 1.4rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 1.24rem;
+}
+
+.slider-block {
+  margin-bottom: 1rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 1.15rem;
+}
+
+.loan-card input[type='range'] {
+  width: 100%;
+  accent-color: var(--primary-soft);
+}
+
+.summary-box {
+  margin-top: 1.2rem;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.44);
+  padding: 0.95rem;
+}
+
+.summary-box div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.summary-box span {
+  color: #5a5b5d;
+}
+
+.summary-box strong {
+  color: #111;
+}
+
+.total-row {
+  border-top: 1px solid var(--border);
+  padding-top: 0.8rem;
+  margin-top: 0.7rem;
+}
+
+@media (max-width: 1100px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+}

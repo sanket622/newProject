@@ -1,6 +1,7 @@
-import frame35 from '../assets/Frame 35.png'
-import frame33 from '../assets/Frame 33.png'
-import frame331 from '../assets/Frame 33 (1).png'
+import './FeaturesSection.css'
+import frame35 from '../../assets/Frame 35.png'
+import frame33 from '../../assets/Frame 33.png'
+import frame331 from '../../assets/Frame 33 (1).png'
 
 const features = [
   {
@@ -26,7 +27,7 @@ function FeaturesSection() {
       {features.map((feature) => (
         <article key={feature.title}>
           <div className="feature-icon">
-            <img src={feature.icon} alt="" />
+            <img src={feature.icon} alt={feature.title} />
           </div>
           <h3>{feature.title}</h3>
           <p>{feature.text}</p>

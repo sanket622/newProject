@@ -1,0 +1,180 @@
+.steps-showcase {
+  position: relative;
+  padding: clamp(2.2rem, 5vw, 4.2rem) clamp(1rem, 4vw, 6rem) clamp(2.5rem, 5vw, 4.5rem);
+  background-color: #efefef;
+  background-image: radial-gradient(circle at 8px 8px, rgba(255, 255, 255, 0.92) 1px, transparent 1px);
+  background-size: 14px 14px;
+}
+
+.steps-showcase h2 {
+  margin: 0;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2rem, 4.2vw, 4.1rem);
+  line-height: 1.1;
+  color: #0f0f0f;
+}
+
+.steps-diagram {
+  position: relative;
+  width: min(1240px, 100%);
+  height: 760px;
+  margin: 1.6rem auto 0;
+}
+
+.flow-line {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.flow-line path {
+  fill: none;
+  stroke: #8225a8;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.step-copy {
+  position: absolute;
+  max-width: 265px;
+}
+
+.step-copy h3 {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.55rem, 2.3vw, 2.9rem);
+  line-height: 1.05;
+  color: #111111;
+}
+
+.step-copy p {
+  margin: 0.7rem 0 0;
+  color: #5f6165;
+  font-size: clamp(1rem, 1.3vw, 1.85rem);
+  line-height: 1.35;
+}
+
+.copy-1 {
+  top: 94px;
+  left: 0;
+}
+
+.copy-2 {
+  top: 208px;
+  right: 0;
+}
+
+.copy-3 {
+  top: 448px;
+  left: 0;
+}
+
+.copy-4 {
+  top: 572px;
+  right: 0;
+}
+
+.node {
+  position: absolute;
+}
+
+.node-icon {
+  width: 118px;
+  height: 118px;
+  display: block;
+}
+
+.node-icon img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.node-number {
+  position: absolute;
+  top: -6px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2rem, 3vw, 3.8rem);
+  font-weight: 700;
+  line-height: 1;
+  color: #111111;
+}
+
+.node-1 {
+  left: 315px;
+  top: 110px;
+}
+
+.node-1 .node-number {
+  left: -74px;
+}
+
+.node-2 {
+  right: 300px;
+  top: 240px;
+}
+
+.node-2 .node-number {
+  right: -290px;
+}
+
+.node-3 {
+  left: 315px;
+  top: 482px;
+}
+
+.node-3 .node-number {
+  left: -74px;
+}
+
+.node-4 {
+  right: 300px;
+  top: 614px;
+}
+
+.node-4 .node-number {
+  right: -250px;
+}
+
+@media (max-width: 780px) {
+  .steps-diagram {
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .flow-line {
+    display: none;
+  }
+
+  .step-copy,
+  .node {
+    position: static;
+    max-width: 100%;
+  }
+
+  .node {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .node-number {
+    position: static;
+    min-width: 2rem;
+  }
+
+  .node-1,
+  .node-2,
+  .node-3,
+  .node-4 {
+    left: auto;
+    right: auto;
+    top: auto;
+  }
+}

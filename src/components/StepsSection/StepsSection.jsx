@@ -1,7 +1,8 @@
-import frame33 from '../assets/Frame 33 (2).png'
-import frame34 from '../assets/Frame 34.png'
-import frame35 from '../assets/Frame 35.png'
-import frame36 from '../assets/Frame 36.png'
+import './StepsSection.css'
+import frame33 from '../../assets/Frame 33 (2).png'
+import frame34 from '../../assets/Frame 34.png'
+import frame35 from '../../assets/Frame 35.png'
+import frame36 from '../../assets/Frame 36.png'
 
 function StepsSection() {
   return (
@@ -54,28 +55,28 @@ function StepsSection() {
         <div className="node node-1">
           <span className="node-number">1</span>
           <div className="node-icon">
-            <img src={frame33} alt="" />
+            <img src={frame33} alt="Step 1" />
           </div>
         </div>
 
         <div className="node node-2">
           <span className="node-number">2</span>
           <div className="node-icon">
-            <img src={frame34} alt="" />
+            <img src={frame34} alt="Step 2" />
           </div>
         </div>
 
         <div className="node node-3">
           <span className="node-number">3</span>
           <div className="node-icon">
-            <img src={frame35} alt="" />
+            <img src={frame35} alt="Step 3" />
           </div>
         </div>
 
         <div className="node node-4">
           <span className="node-number">4</span>
           <div className="node-icon">
-            <img src={frame36} alt="" />
+            <img src={frame36} alt="Step 4" />
           </div>
         </div>
       </div>

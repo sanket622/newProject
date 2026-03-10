@@ -1,7 +1,7 @@
-import HeroSection from '../components/HeroSection'
-import StatsSection from '../components/StatsSection'
-import StepsSection from '../components/StepsSection'
-import FeaturesSection from '../components/FeaturesSection'
+import HeroSection from '../components/HeroSection/HeroSection'
+import StatsSection from '../components/StatsSection/StatsSection'
+import StepsSection from '../components/StepsSection/StepsSection'
+import FeaturesSection from '../components/FeaturesSection/FeaturesSection'
 
 function HomePage() {
   return (

@@ -1,3 +1,5 @@
+import './Footer.css'
+
 function Footer({ onNavigate }) {
   return (
     <footer className="site-footer paper-bg" id="contact">

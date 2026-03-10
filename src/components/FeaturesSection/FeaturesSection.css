@@ -1,0 +1,46 @@
+.feature-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.4rem;
+  padding: clamp(2rem, 4vw, 4rem) clamp(1rem, 4vw, 6rem);
+  background: #060606;
+}
+
+.feature-strip article {
+  border-radius: 24px;
+  background: #ececed;
+  padding: 1.8rem 1.5rem;
+  text-align: center;
+}
+
+.feature-icon {
+  width: 110px;
+  height: 110px;
+  margin: 0 auto 1.1rem;
+}
+
+.feature-icon img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.feature-strip h3 {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.8rem, 2.6vw, 3rem);
+}
+
+.feature-strip p {
+  margin: 0.9rem auto 0;
+  color: #646466;
+  max-width: 520px;
+  font-size: 1.14rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 780px) {
+  .feature-strip {
+    grid-template-columns: 1fr;
+  }
+}

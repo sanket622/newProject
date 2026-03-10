@@ -2,8 +2,11 @@
   position: relative;
   padding: clamp(2.2rem, 5vw, 4.2rem) clamp(1rem, 4vw, 6rem) clamp(2.5rem, 5vw, 4.5rem);
   background-color: #efefef;
-  background-image: radial-gradient(circle at 8px 8px, rgba(255, 255, 255, 0.92) 1px, transparent 1px);
-  background-size: 14px 14px;
+  background-image:
+    radial-gradient(circle at 8px 8px, rgba(255, 255, 255, 0.92) 1px, transparent 1px),
+    linear-gradient(rgba(130, 37, 167, 0.16) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(130, 37, 167, 0.16) 1px, transparent 1px);
+  background-size: 14px 14px, 86px 86px, 86px 86px;
 }
 
 .steps-showcase h2 {
@@ -110,7 +113,7 @@
 }
 
 .node-1 .node-number {
-  left: -74px;
+  left: -58px;
 }
 
 .node-2 {
@@ -128,7 +131,7 @@
 }
 
 .node-3 .node-number {
-  left: -74px;
+  left: -58px;
 }
 
 .node-4 {

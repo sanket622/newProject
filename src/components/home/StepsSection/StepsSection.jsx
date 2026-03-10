@@ -15,40 +15,41 @@ function StepsSection() {
 
       <div className="steps-diagram" aria-label="Loan process in four steps">
         <svg className="flow-line" viewBox="0 0 1200 760" preserveAspectRatio="none" aria-hidden="true">
-          <path d="M433 169 H700 C760 169 795 210 801 258" />
-          <path d="M801 340 C795 390 760 410 700 410 H500 C450 410 430 450 420 499" />
-          <path d="M420 583 C430 630 460 673 520 673 H782" />
+          <path d="M433 169 H700 C790 169 853 190 853 240" />
+          <path d="M853 358 C853 410 790 430 700 430 H535 C430 430 374 450 374 482" />
+          <path d="M374 600 C374 650 430 673 535 673 H820 C860 673 881 650 881 614" />
         </svg>
 
         <article className="step-copy copy-1">
           <h3>Tell Us Your Dream</h3>
           <p>
-            Let us know your financial plans, whether it is launching a business,
-            renovating your home, or handling unexpected expenses.
+            Let us know your financial plans—be it launching a business,
+            renovating your home, or handling unexpected expenses. We're here to
+            turn your plans into reality.
           </p>
         </article>
 
         <article className="step-copy copy-2">
           <h3>Easy Document Upload</h3>
           <p>
-            Easily capture photos of your essential documents through our smart app
-            without long queues or paperwork hassles.
+            Easily capture photos of your essential documents through our smart app—no
+            queues and no complex paperwork required.
           </p>
         </article>
 
         <article className="step-copy copy-3">
           <h3>AI-Powered Instant Approval</h3>
           <p>
-            Our AI-powered technology evaluates your application in seconds and
-            delivers immediate approval.
+            Our AI-powered technology evaluates your application within seconds and
+            delivers immediate approval, eliminating delays and uncertainty.
           </p>
         </article>
 
         <article className="step-copy copy-4">
           <h3>Funds in Minutes</h3>
           <p>
-            Once your loan is approved, funds are quickly transferred to your bank
-            account within minutes.
+            Once your loan is approved, the funds are quickly transferred to your bank
+            account within minutes instead of days.
           </p>
         </article>
 

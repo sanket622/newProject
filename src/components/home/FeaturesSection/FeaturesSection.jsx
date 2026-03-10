@@ -7,17 +7,17 @@ const features = [
   {
     icon: frame35,
     title: 'Automation',
-    text: 'Our solutions enable fintechs and NBFCs to simplify operations with automation and secure infrastructure.',
+    text: 'Our solutions enable fintechs and NBFCs to simplify operations with automation, strong compliance frameworks, and secure infrastructure, allowing them to concentrate on growth.',
   },
   {
     icon: frame33,
     title: 'Compliance',
-    text: 'Maintain audit readiness and long-term compliance with RBI-aligned processes and documentation.',
+    text: 'Maintain audit readiness and long-term compliance with RBI-aligned protocols, automated monitoring, and well-structured regulatory documentation',
   },
   {
     icon: frame331,
     title: 'Operational Enhancement',
-    text: 'Reduce loan turnaround times with real-time tracking and efficient workflow coordination.',
+    text: 'Reduce loan turnaround times through real-time tracking, efficient workflows, and stronger team coordination, leading to better borrower experiences.',
   },
 ]
 

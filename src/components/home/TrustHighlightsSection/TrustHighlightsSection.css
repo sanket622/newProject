@@ -1,0 +1,120 @@
+.trust-highlights {
+  background: transparent;
+  padding: 2.2rem clamp(1rem, 4vw, 6rem) 2.6rem;
+  text-align: center;
+}
+
+.trust-highlights h2 {
+  margin: 0 auto 0.9rem;
+  width: 655px;
+  height: 110px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 48px;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-align: center;
+  vertical-align: middle;
+  color: #111111;
+}
+
+.trust-subtext {
+  margin: 0 auto 1.8rem;
+  width: 691px;
+  height: 69px;
+  color: #5f6165;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 272px);
+  gap: 52px;
+  max-width: 1024px;
+  margin: 0 auto;
+  justify-content: center;
+  position: relative;
+}
+
+.trust-grid article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 272px;
+  height: 211px;
+  gap: 14px;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.trust-grid article > img {
+  width: 118px;
+  height: 118px;
+  display: block;
+}
+
+.trust-grid h3 {
+  margin: 0 auto;
+  width: 272px;
+  height: 27px;
+  color: #5f6165;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.trust-grid p {
+  margin: 0 auto;
+  width: 272px;
+  color: #5f6165;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.trust-connector {
+  position: absolute;
+  width: 320px;
+  height: 120px;
+  top: 16px;
+  object-fit: contain;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 1;
+}
+
+.trust-connector-1 {
+  left: 142px;
+}
+
+.trust-connector-2 {
+  left: 466px;
+}
+
+@media (max-width: 780px) {
+  .trust-grid {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+    max-width: 272px;
+  }
+
+  .trust-connector {
+    display: none;
+  }
+}

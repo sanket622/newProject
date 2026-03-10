@@ -1,0 +1,71 @@
+.promo-cta {
+  background: transparent;
+  text-align: center;
+  padding: 1.5rem 1rem 2.4rem;
+}
+
+.promo-heading {
+  margin: 0 0 0.9rem;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.6rem, 3.2vw, 3rem);
+  line-height: 1.2;
+  color: #111111;
+}
+
+.promo-curve {
+  display: block;
+  width: min(920px, 100%);
+  height: 72px;
+  margin: 0 auto 1rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.promo-cta p {
+  margin: 0 auto;
+  width: 691px;
+  height: 46px;
+  color: #88898d;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.promo-actions {
+  margin-top: 1.3rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.promo-btn {
+  width: 204px;
+  height: 52px;
+  border-width: 1px;
+  border-radius: 58px;
+  padding: 0;
+  font-size: clamp(1rem, 1.35vw, 1.7rem);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.promo-btn-primary {
+  border: 1px solid #7d22a4;
+  background: #8125a7;
+  color: #ffffff;
+  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.8);
+}
+
+.promo-btn-secondary {
+  border: 1px solid #747476;
+  background: #ececed;
+  color: #5c5d5f;
+  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.8);
+}

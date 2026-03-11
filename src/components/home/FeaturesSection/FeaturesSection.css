@@ -18,9 +18,11 @@
 
 .feature-strip article {
   border-radius: 24px;
-  background: #ececed;
+  background: #f3f3f4;
+  border: 1px solid #d5d5d9;
   padding: 1.8rem 1.5rem;
   text-align: center;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
 }
 
 .feature-icon {
@@ -43,7 +45,7 @@
 
 .feature-strip p {
   margin: 0.9rem auto 0;
-  color: #646466;
+  color: #4f5054;
   max-width: 520px;
   font-size: 1.14rem;
   line-height: 1.4;
@@ -52,5 +54,11 @@
 @media (max-width: 780px) {
   .feature-strip {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1100px) and (min-width: 781px) {
+  .feature-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }

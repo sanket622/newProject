@@ -21,23 +21,13 @@
   line-height: 1.5;
 }
 
-.about-grid,
 .contact-grid,
 .lending-grid {
   display: grid;
   gap: 1.25rem;
-}
-
-.about-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.contact-grid,
-.lending-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.about-grid article,
 .contact-grid article,
 .lending-grid article {
   border-radius: 18px;
@@ -46,7 +36,6 @@
   padding: 1.3rem;
 }
 
-.about-grid h2,
 .contact-grid h2,
 .lending-grid h2 {
   margin: 0;
@@ -54,7 +43,6 @@
   font-size: clamp(1.35rem, 2vw, 2.1rem);
 }
 
-.about-grid p,
 .contact-grid p,
 .lending-grid p {
   margin: 0.7rem 0 0;
@@ -68,7 +56,6 @@
 }
 
 @media (max-width: 780px) {
-  .about-grid,
   .contact-grid,
   .lending-grid {
     grid-template-columns: 1fr;

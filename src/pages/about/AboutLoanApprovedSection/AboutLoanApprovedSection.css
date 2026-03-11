@@ -1,0 +1,73 @@
+.about-loan-approved-section {
+  margin: 0;
+}
+
+.about-loan-approved-content {
+  display: grid;
+  grid-template-columns: minmax(340px, 531px) minmax(0, 1fr);
+  gap: clamp(1rem, 2vw, 2rem);
+  align-items: start;
+  justify-content: space-between;
+}
+
+.about-loan-approved-content img {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 531 / 482;
+}
+
+.about-loan-approved-right {
+  padding-left: clamp(0.35rem, 0.9vw, 0.7rem);
+}
+
+.about-loan-approved-right h2 {
+  margin: 0;
+  width: min(673px, 100%);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: clamp(2rem, 4.6vw, 48px);
+  line-height: 100%;
+  letter-spacing: 0;
+  vertical-align: middle;
+  color: #111111;
+}
+
+.about-loan-approved-copy {
+  margin-top: 8px;
+  width: min(673px, 100%);
+  display: grid;
+  gap: 8px;
+}
+
+.about-loan-approved-copy p {
+  margin: 0;
+  color: #555658;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+@media (max-width: 980px) {
+  .about-loan-approved-content {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .about-loan-approved-content img,
+  .about-loan-approved-right h2,
+  .about-loan-approved-copy {
+    width: 100%;
+  }
+
+  .about-loan-approved-right {
+    padding-left: 0;
+  }
+
+  .about-loan-approved-right h2 {
+    font-size: clamp(2rem, 6vw, 2.8rem);
+  }
+}

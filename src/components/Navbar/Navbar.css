@@ -2,6 +2,9 @@
   position: sticky;
   top: 0;
   z-index: 30;
+  width: 100%;
+  min-height: 95px;
+  margin: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -40,6 +43,8 @@
 
 @media (max-width: 1100px) {
   .top-nav {
+    width: 100%;
+    min-height: 0;
     flex-wrap: wrap;
     justify-content: center;
   }

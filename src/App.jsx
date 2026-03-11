@@ -2,10 +2,10 @@ import { useEffect, useMemo, useState } from 'react'
 import './styles/common.css'
 import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
-import HomePage from './pages/HomePage'
-import AboutPage from './pages/AboutPage'
-import ContactPage from './pages/ContactPage'
-import LendingPage from './pages/LendingPage'
+import HomePage from './pages/home/HomePage'
+import AboutPage from './pages/about/AboutPage'
+import ContactPage from './pages/contact/ContactPage'
+import LendingPage from './pages/lending/LendingPage'
 
 const routeMap = {
   '/': HomePage,

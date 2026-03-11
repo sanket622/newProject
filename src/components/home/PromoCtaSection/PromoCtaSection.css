@@ -24,8 +24,9 @@
 
 .promo-cta p {
   margin: 0 auto;
-  width: 691px;
-  height: 46px;
+  width: min(691px, 100%);
+  min-height: 46px;
+  height: auto;
   color: #88898d;
   font-family: 'DM Sans', sans-serif;
   font-weight: 400;
@@ -68,4 +69,10 @@
   background: #ececed;
   color: #5c5d5f;
   box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 780px) {
+  .promo-cta p {
+    line-height: 1.25;
+  }
 }

@@ -6,8 +6,9 @@
 
 .trust-highlights h2 {
   margin: 0 auto 0.9rem;
-  width: 655px;
-  height: 110px;
+  width: min(655px, 100%);
+  min-height: 110px;
+  height: auto;
   font-family: Georgia, 'Times New Roman', serif;
   font-weight: 700;
   font-style: normal;
@@ -21,8 +22,9 @@
 
 .trust-subtext {
   margin: 0 auto 1.8rem;
-  width: 691px;
-  height: 69px;
+  width: min(691px, 100%);
+  min-height: 69px;
+  height: auto;
   color: #5f6165;
   font-family: 'DM Sans', sans-serif;
   font-weight: 400;
@@ -107,11 +109,53 @@
   left: 466px;
 }
 
-@media (max-width: 780px) {
+@media (max-width: 1100px) and (min-width: 921px) {
+  .trust-grid {
+    gap: 28px;
+    max-width: 872px;
+  }
+
+  .trust-connector {
+    width: 280px;
+    height: 104px;
+    top: 20px;
+  }
+
+  .trust-connector-1 {
+    left: 133px;
+  }
+
+  .trust-connector-2 {
+    left: 433px;
+  }
+}
+
+@media (max-width: 920px) {
   .trust-grid {
     grid-template-columns: 1fr;
     gap: 1.4rem;
     max-width: 272px;
+  }
+
+  .trust-highlights h2 {
+    min-height: 0;
+    font-size: clamp(1.9rem, 7vw, 2.5rem);
+  }
+
+  .trust-subtext {
+    min-height: 0;
+    line-height: 1.25;
+  }
+
+  .trust-grid article {
+    width: 100%;
+    height: auto;
+  }
+
+  .trust-grid h3,
+  .trust-grid p {
+    width: 100%;
+    height: auto;
   }
 
   .trust-connector {

@@ -24,65 +24,67 @@ function HeroSection() {
         </div>
       </div>
 
-      <aside className="loan-card">
-        <h2>Calculate your Loan</h2>
-        <p>Calculate your daily interest and plan your short-term loan repayment</p>
+      <div className="loan-card-wrap">
+        <aside className="loan-card">
+          <h2>Calculate your Loan</h2>
+          <p>Calculate your daily interest and plan your short-term loan repayment</p>
 
-        <div className="slider-block">
-          <div className="row">
-            <strong>Loan Amount</strong>
-            <strong>Rs. 5,000</strong>
+          <div className="slider-block">
+            <div className="row">
+              <strong>Loan Amount</strong>
+              <strong>Rs. 5,000</strong>
+            </div>
+            <input type="range" min="1000" max="50000" defaultValue="5000" />
           </div>
-          <input type="range" min="1000" max="50000" defaultValue="5000" />
-        </div>
 
-        <div className="slider-block">
-          <div className="row">
-            <strong>Loan Tenure (Days)</strong>
-            <strong>1 day</strong>
+          <div className="slider-block">
+            <div className="row">
+              <strong>Loan Tenure (Days)</strong>
+              <strong>1 day</strong>
+            </div>
+            <input type="range" min="1" max="90" defaultValue="1" />
           </div>
-          <input type="range" min="1" max="90" defaultValue="1" />
-        </div>
 
-        <div className="slider-block">
-          <div className="row">
-            <strong>Daily Interest Rate (%)</strong>
-            <strong>1%</strong>
+          <div className="slider-block">
+            <div className="row">
+              <strong>Daily Interest Rate (%)</strong>
+              <strong>1%</strong>
+            </div>
+            <input type="range" min="1" max="5" defaultValue="1" />
           </div>
-          <input type="range" min="1" max="5" defaultValue="1" />
-        </div>
 
-        <div className="summary-box">
-          <div>
-            <span>Loan Amount</span>
-            <strong>Rs. 5,000</strong>
+          <div className="summary-box">
+            <div>
+              <span>Loan Amount</span>
+              <strong>Rs. 5,000</strong>
+            </div>
+            <div>
+              <span>Daily Interest Rate (%)</span>
+              <strong>1% per day</strong>
+            </div>
+            <div>
+              <span>Loan Tenure</span>
+              <strong>1 day</strong>
+            </div>
+            <div>
+              <span>Daily Interest</span>
+              <strong>Rs. 50</strong>
+            </div>
+            <div>
+              <span>Total Interest</span>
+              <strong>Rs. 50</strong>
+            </div>
+            <div className="total-row">
+              <span>Loan Amount</span>
+              <strong>Rs. 5,000</strong>
+            </div>
           </div>
-          <div>
-            <span>Daily Interest Rate (%)</span>
-            <strong>1% per day</strong>
-          </div>
-          <div>
-            <span>Loan Tenure</span>
-            <strong>1 day</strong>
-          </div>
-          <div>
-            <span>Daily Interest</span>
-            <strong>Rs. 50</strong>
-          </div>
-          <div>
-            <span>Total Interest</span>
-            <strong>Rs. 50</strong>
-          </div>
-          <div className="total-row">
-            <span>Loan Amount</span>
-            <strong>Rs. 5,000</strong>
-          </div>
-        </div>
 
-        <button className="btn btn-outline" type="button">
-          Apply For Loan
-        </button>
-      </aside>
+          <button className="btn btn-outline" type="button">
+            Apply For Loan
+          </button>
+        </aside>
+      </div>
     </section>
   )
 }

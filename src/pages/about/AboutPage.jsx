@@ -3,6 +3,11 @@ import './AboutPage.css'
 import AboutIntroSection from './AboutIntroSection/AboutIntroSection'
 import AboutSecurityCtaSection from './AboutSecurityCtaSection/AboutSecurityCtaSection'
 import AboutLoanApprovedSection from './AboutLoanApprovedSection/AboutLoanApprovedSection'
+import AboutProcessSection from './AboutProcessSection/AboutProcessSection'
+import AboutWhyChooseSection from './AboutWhyChooseSection/AboutWhyChooseSection'
+import AboutTestimonialsSection from './AboutTestimonialsSection/AboutTestimonialsSection'
+import AboutIntegritySection from './AboutIntegritySection/AboutIntegritySection'
+import AboutAchievementsSection from './AboutAchievementsSection/AboutAchievementsSection'
 
 function AboutPage() {
   return (
@@ -10,6 +15,11 @@ function AboutPage() {
       <AboutIntroSection />
       <AboutSecurityCtaSection />
       <AboutLoanApprovedSection />
+      <AboutProcessSection />
+      <AboutWhyChooseSection />
+      <AboutTestimonialsSection />
+      <AboutIntegritySection />
+      <AboutAchievementsSection />
     </section>
   )
 }

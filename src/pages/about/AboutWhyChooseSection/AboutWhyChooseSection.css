@@ -1,0 +1,78 @@
+.about-why-choose {
+  padding: clamp(1.2rem, 2.2vw, 2rem) 0 clamp(1.6rem, 2.8vw, 2.4rem);
+}
+
+.about-why-choose h2 {
+  margin: 0 auto clamp(1rem, 2.2vw, 1.8rem);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 4.2vw, 4rem);
+  line-height: 1.05;
+  text-align: center;
+  color: #111111;
+}
+
+.about-why-choose-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(0.8rem, 1.2vw, 1.2rem);
+}
+
+.about-why-card {
+  background: #f3f3f3;
+  border: 1px solid #d2d2d2;
+  border-radius: 18px;
+  padding: 0.9rem 0.95rem 1rem;
+  min-height: 320px;
+}
+
+.about-why-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 10px;
+  background: #7f1f9d;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 40px;
+  line-height: 1;
+}
+
+.about-why-card h3 {
+  margin: 1rem 0 0.65rem;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 2.3vw, 2.7rem);
+  line-height: 1.02;
+  color: #111111;
+}
+
+.about-why-card p {
+  margin: 0;
+  color: #5f6165;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+@media (max-width: 1200px) {
+  .about-why-choose-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-why-card {
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 680px) {
+  .about-why-choose-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-why-card {
+    min-height: 0;
+  }
+}

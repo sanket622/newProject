@@ -1,0 +1,50 @@
+.about-achievements-section {
+  padding: clamp(1.2rem, 2.3vw, 2rem) 0 clamp(1.5rem, 3vw, 2.4rem);
+  text-align: center;
+}
+
+.about-achievements-section h2 {
+  margin: 0 auto 1rem;
+  color: #111111;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 4.2vw, 4rem);
+  line-height: 1.05;
+}
+
+.about-achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.8rem, 1.2vw, 1.2rem);
+}
+
+.about-achievement-card {
+  background: #7f1f9d;
+  border: 1px solid #b177c6;
+  border-radius: 18px;
+  padding: 1.2rem 0.9rem 1.1rem;
+}
+
+.about-achievement-card strong {
+  display: block;
+  color: #ffffff;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  line-height: 1;
+}
+
+.about-achievement-card p {
+  margin: 0.6rem 0 0;
+  color: #ffffff;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: clamp(1.1rem, 2.1vw, 2rem);
+  line-height: 1.1;
+}
+
+@media (max-width: 900px) {
+  .about-achievements-grid {
+    grid-template-columns: 1fr;
+  }
+}

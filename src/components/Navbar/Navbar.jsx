@@ -1,4 +1,5 @@
 import './Navbar.css'
+import vectorLogo from '../../assets/Vector.png'
 
 const navLinks = [
   { label: 'Home', path: '/' },
@@ -10,7 +11,9 @@ const navLinks = [
 function Navbar({ onNavigate, currentPath }) {
   return (
     <header className="top-nav">
-      <div className="brand">RUPEE YATRA</div>
+      <button type="button" className="brand-button" onClick={() => onNavigate('/')}>
+        <img className="brand-logo" src={vectorLogo} alt="Rupee Yatra" />
+      </button>
       <nav>
         {navLinks.map((item) => (
           <button
@@ -23,9 +26,14 @@ function Navbar({ onNavigate, currentPath }) {
           </button>
         ))}
       </nav>
-      <button className="btn btn-primary" type="button">
-        Login / Signup
-      </button>
+      <div className="nav-actions">
+        <button className="btn nav-apply-btn" type="button">
+          Apply Loan
+        </button>
+        <button className="btn nav-repay-btn" type="button">
+          Repay Loan
+        </button>
+      </div>
     </header>
   )
 }

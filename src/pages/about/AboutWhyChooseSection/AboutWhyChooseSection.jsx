@@ -1,4 +1,6 @@
 import './AboutWhyChooseSection.css'
+import frame58 from '../../../assets/Frame 58.png'
+import frame581 from '../../../assets/Frame 58 (1).png'
 
 const cards = [
   {
@@ -13,11 +15,13 @@ const cards = [
   },
   {
     title: 'Advanced Technology',
+    icon: frame58,
     text:
       'By leveraging advanced AI and machine learning, we enable smarter growth and innovation with real-time credit evaluation and instant loan approval systems.',
   },
   {
     title: 'Customer-Oriented',
+    icon: frame581,
     text:
       'We enhance the borrower experience through secure and efficient operations, supported by round-the-clock customer assistance and tailored loan solutions.',
   },
@@ -36,7 +40,7 @@ function AboutWhyChooseSection() {
         {cards.map((card) => (
           <article key={card.title} className="about-why-card">
             <span className="about-why-icon" aria-hidden="true">
-              ☆
+              {card.icon ? <img src={card.icon} alt="" /> : '☆'}
             </span>
             <h3>{card.title}</h3>
             <p>{card.text}</p>

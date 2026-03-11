@@ -2,9 +2,9 @@
   --bg: #efeff0;
   --text: #111111;
   --muted: #666666;
-  --primary: #8125a7;
-  --primary-soft: #a352cb;
-  --line: rgba(128, 37, 167, 0.18);
+  --primary: #5b298c;
+  --primary-soft: #7a42ab;
+  --line: rgba(91, 41, 140, 0.18);
   --card: #ececed;
   --border: #c9c9cc;
 }
@@ -43,7 +43,7 @@ body {
 .btn-primary {
   background: var(--primary);
   color: white;
-  box-shadow: 0 8px 20px rgba(129, 37, 167, 0.24);
+  box-shadow: 0 8px 20px rgba(91, 41, 140, 0.24);
 }
 
 .btn-secondary {

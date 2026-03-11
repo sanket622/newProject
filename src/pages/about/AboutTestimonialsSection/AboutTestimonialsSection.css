@@ -21,8 +21,8 @@
 }
 
 .about-testimonials-tags span {
-  border: 1px solid #7f1f9d;
-  color: #7f1f9d;
+  border: 1px solid #5b298c;
+  color: #5b298c;
   border-radius: 999px;
   padding: 0.45rem 1.15rem;
   font-family: 'DM Sans', sans-serif;
@@ -50,7 +50,7 @@
 
 .about-testimonial-card {
   background: #ece9ee;
-  border: 1px solid #7f1f9d;
+  border: 1px solid #5b298c;
   border-radius: 24px;
   padding: 1rem;
   text-align: left;
@@ -92,7 +92,7 @@
 .about-testimonial-divider {
   margin: 0.9rem 0;
   height: 1px;
-  background: #7f1f9d;
+  background: #5b298c;
 }
 
 .about-testimonial-card h4 {

@@ -1,6 +1,27 @@
+import { useMemo, useState } from 'react'
 import './HeroSection.css'
 
 function HeroSection() {
+  const [loanAmount, setLoanAmount] = useState(5000)
+  const [loanTenureDays, setLoanTenureDays] = useState(1)
+  const [dailyInterestRate, setDailyInterestRate] = useState(1)
+
+  const { dailyInterest, totalInterest, totalRepayment } = useMemo(() => {
+    const perDayInterest = (loanAmount * dailyInterestRate) / 100
+    const fullInterest = perDayInterest * loanTenureDays
+    return {
+      dailyInterest: perDayInterest,
+      totalInterest: fullInterest,
+      totalRepayment: loanAmount + fullInterest,
+    }
+  }, [loanAmount, loanTenureDays, dailyInterestRate])
+
+  const formatINR = (value) =>
+    new Intl.NumberFormat('en-IN', {
+      maximumFractionDigits: 2,
+      minimumFractionDigits: Number.isInteger(value) ? 0 : 2,
+    }).format(value)
+
   return (
     <section className="hero grid-bg">
       <div className="hero-copy">
@@ -32,51 +53,75 @@ function HeroSection() {
           <div className="slider-block">
             <div className="row">
               <strong>Loan Amount</strong>
-              <strong>Rs. 5,000</strong>
+              <strong>Rs. {formatINR(loanAmount)}</strong>
             </div>
-            <input type="range" min="1000" max="50000" defaultValue="5000" />
+            <input
+              type="range"
+              min="1000"
+              max="50000"
+              step="500"
+              value={loanAmount}
+              onChange={(event) => setLoanAmount(Number(event.target.value))}
+            />
           </div>
 
           <div className="slider-block">
             <div className="row">
               <strong>Loan Tenure (Days)</strong>
-              <strong>1 day</strong>
+              <strong>
+                {loanTenureDays} day{loanTenureDays > 1 ? 's' : ''}
+              </strong>
             </div>
-            <input type="range" min="1" max="90" defaultValue="1" />
+            <input
+              type="range"
+              min="1"
+              max="90"
+              value={loanTenureDays}
+              onChange={(event) => setLoanTenureDays(Number(event.target.value))}
+            />
           </div>
 
           <div className="slider-block">
             <div className="row">
               <strong>Daily Interest Rate (%)</strong>
-              <strong>1%</strong>
+              <strong>{dailyInterestRate}%</strong>
             </div>
-            <input type="range" min="1" max="5" defaultValue="1" />
+            <input
+              type="range"
+              min="1"
+              max="5"
+              step="0.1"
+              value={dailyInterestRate}
+              onChange={(event) => setDailyInterestRate(Number(event.target.value))}
+            />
           </div>
 
           <div className="summary-box">
             <div>
               <span>Loan Amount</span>
-              <strong>Rs. 5,000</strong>
+              <strong>Rs. {formatINR(loanAmount)}</strong>
             </div>
             <div>
               <span>Daily Interest Rate (%)</span>
-              <strong>1% per day</strong>
+              <strong>{dailyInterestRate}% per day</strong>
             </div>
             <div>
               <span>Loan Tenure</span>
-              <strong>1 day</strong>
+              <strong>
+                {loanTenureDays} day{loanTenureDays > 1 ? 's' : ''}
+              </strong>
             </div>
             <div>
               <span>Daily Interest</span>
-              <strong>Rs. 50</strong>
+              <strong>Rs. {formatINR(dailyInterest)}</strong>
             </div>
             <div>
               <span>Total Interest</span>
-              <strong>Rs. 50</strong>
+              <strong>Rs. {formatINR(totalInterest)}</strong>
             </div>
             <div className="total-row">
-              <span>Loan Amount</span>
-              <strong>Rs. 5,000</strong>
+              <span>Total Repayment</span>
+              <strong>Rs. {formatINR(totalRepayment)}</strong>
             </div>
           </div>
 

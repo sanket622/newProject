@@ -1,0 +1,72 @@
+.lending-intro-section {
+  text-align: center;
+  padding: clamp(1.2rem, 2.6vw, 2.2rem) 0 clamp(1.8rem, 3.3vw, 2.8rem);
+}
+
+.lending-intro-section h1 {
+  margin: 0;
+  color: #111111;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 4.1vw, 4rem);
+  line-height: 1.05;
+}
+
+.lending-intro-lead,
+.lending-intro-sublead {
+  margin: 0.9rem auto 0;
+  max-width: 860px;
+  color: #5f6165;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  line-height: 1.3;
+}
+
+.lending-intro-sublead {
+  margin-top: 0.45rem;
+}
+
+.lending-intro-second-title {
+  margin-top: clamp(1.1rem, 2.1vw, 1.8rem) !important;
+}
+
+.lending-intro-grid {
+  margin-top: clamp(1.2rem, 2.3vw, 1.8rem);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 1.8vw, 2rem);
+}
+
+.lending-intro-grid article {
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  gap: 0.9rem;
+}
+
+.lending-intro-grid img {
+  width: 118px;
+  height: 118px;
+  display: block;
+}
+
+.lending-intro-grid p {
+  margin: 0;
+  max-width: 360px;
+  color: #4f5053;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: clamp(1rem, 1.2vw, 1.1rem);
+  line-height: 1.3;
+}
+
+@media (max-width: 960px) {
+  .lending-intro-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lending-intro-grid p {
+    max-width: 100%;
+  }
+}

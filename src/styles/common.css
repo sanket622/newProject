@@ -1,5 +1,5 @@
 :root {
-  --bg: #efeff0;
+  --bg: #ffffff;
   --text: #111111;
   --muted: #666666;
   --primary: #5b298c;
@@ -23,7 +23,7 @@ body,
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #efeff0;
+  background: #ffffff;
 }
 
 .page-shell {
@@ -66,6 +66,6 @@ body {
 }
 
 .paper-bg {
-  background-color: #f0eff0;
+  background-color: #ffffff;
   background-image: none;
 }

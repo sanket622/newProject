@@ -1,0 +1,143 @@
+.lending-why-partners {
+  text-align: center;
+  padding: clamp(1.2rem, 2.4vw, 2.1rem) 0 clamp(1.8rem, 3.2vw, 2.7rem);
+  background-image:
+    radial-gradient(circle at 8px 8px, rgba(255, 255, 255, 0.92) 1px, transparent 1px),
+    linear-gradient(rgba(91, 41, 140, 0.14) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(91, 41, 140, 0.14) 1px, transparent 1px);
+  background-size: 14px 14px, 86px 86px, 86px 86px;
+}
+
+.lending-why-partners h2 {
+  margin: 0;
+  color: #111111;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 4rem);
+  line-height: 1.05;
+}
+
+.lending-why-partners > p {
+  margin: 0.8rem auto 0;
+  max-width: 900px;
+  color: #5f6165;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: clamp(1rem, 1.25vw, 1.15rem);
+  line-height: 1.3;
+}
+
+.lending-why-layout {
+  margin-top: 1.3rem;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.8rem, 4vw, 5rem) clamp(2.4rem, 7vw, 10rem);
+  padding: clamp(2rem, 4vw, 3.5rem) clamp(1rem, 2vw, 1.5rem);
+}
+
+.lending-why-layout::before,
+.lending-why-layout::after {
+  content: '';
+  position: absolute;
+  width: min(47%, 640px);
+  height: min(45%, 280px);
+  background: rgba(91, 41, 140, 0.05);
+  z-index: 0;
+}
+
+.lending-why-layout::before {
+  top: 0;
+  left: 0;
+}
+
+.lending-why-layout::after {
+  right: 0;
+  bottom: 0;
+}
+
+.lending-cross {
+  position: absolute;
+  background: #5b298c;
+  z-index: 1;
+}
+
+.lending-cross-h {
+  left: 16%;
+  right: 16%;
+  top: 50%;
+  height: 3px;
+  transform: translateY(-50%);
+}
+
+.lending-cross-v {
+  top: 14%;
+  bottom: 14%;
+  left: 50%;
+  width: 3px;
+  transform: translateX(-50%);
+}
+
+.lending-center-node {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: clamp(104px, 11vw, 146px);
+  height: clamp(100px, 10.6vw, 140px);
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.lending-center-node img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.lending-why-card {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  justify-items: center;
+  align-content: start;
+}
+
+.lending-why-card img {
+  width: 60px;
+  height: 60px;
+  display: block;
+}
+
+.lending-why-card h3 {
+  margin: 0.9rem 0 0.55rem;
+  color: #111111;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 700;
+  font-size: clamp(1.7rem, 2.7vw, 3rem);
+  line-height: 1.05;
+}
+
+.lending-why-card p {
+  margin: 0;
+  max-width: 500px;
+  color: #5f6165;
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(1rem, 1.2vw, 1.08rem);
+  line-height: 1.3;
+}
+
+@media (max-width: 980px) {
+  .lending-why-layout {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+    padding: 0.6rem 0;
+  }
+
+  .lending-why-layout::before,
+  .lending-why-layout::after,
+  .lending-cross,
+  .lending-center-node {
+    display: none;
+  }
+}

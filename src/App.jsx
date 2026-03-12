@@ -6,12 +6,14 @@ import HomePage from './pages/home/HomePage'
 import AboutPage from './pages/about/AboutPage'
 import ContactPage from './pages/contact/ContactPage'
 import LendingPage from './pages/lending/LendingPage'
+import LoginPage from './pages/login/LoginPage'
 
 const routeMap = {
   '/': HomePage,
   '/about': AboutPage,
   '/contact': ContactPage,
   '/lending': LendingPage,
+  '/login': LoginPage,
 }
 
 const normalizePath = (path) => {

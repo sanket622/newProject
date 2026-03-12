@@ -7,7 +7,7 @@ const OTP_LENGTH = 4
 
 const onlyDigits = (value) => value.replace(/\D/g, '')
 
-function LoginAuthSection() {
+function LoginAuthSection({ onNavigate }) {
   const [step, setStep] = useState('mobile')
   const [mobile, setMobile] = useState('')
   const [otp, setOtp] = useState('')
@@ -22,46 +22,63 @@ function LoginAuthSection() {
     return `******${mobile.slice(-4)}`
   }, [mobile])
 
+  const fillDigits = (source, startIndex, pastedDigits, maxLength) => {
+    const next = source.split('')
+    pastedDigits
+      .slice(0, maxLength - startIndex)
+      .split('')
+      .forEach((digit, offset) => {
+        next[startIndex + offset] = digit
+      })
+    return next.join('').slice(0, maxLength)
+  }
+
   const handleMobileChange = (index, value) => {
     const digits = onlyDigits(value)
-    const next = mobile.split('')
-
     if (!digits) {
+      const next = mobile.split('')
       next[index] = ''
       setMobile(next.join('').slice(0, MOBILE_LENGTH))
       return
     }
 
-    digits
-      .slice(0, MOBILE_LENGTH - index)
-      .split('')
-      .forEach((digit, offset) => {
-        next[index + offset] = digit
-      })
-
-    setMobile(next.join('').slice(0, MOBILE_LENGTH))
+    setMobile(fillDigits(mobile, index, digits, MOBILE_LENGTH))
     const nextIndex = Math.min(index + digits.length, MOBILE_LENGTH - 1)
     mobileRefs.current[nextIndex]?.focus()
   }
 
   const handleOtpChange = (index, value) => {
     const digits = onlyDigits(value)
-    const next = otp.split('')
-
     if (!digits) {
+      const next = otp.split('')
       next[index] = ''
       setOtp(next.join('').slice(0, OTP_LENGTH))
       return
     }
 
-    digits
-      .slice(0, OTP_LENGTH - index)
-      .split('')
-      .forEach((digit, offset) => {
-        next[index + offset] = digit
-      })
+    setOtp(fillDigits(otp, index, digits, OTP_LENGTH))
+    const nextIndex = Math.min(index + digits.length, OTP_LENGTH - 1)
+    otpRefs.current[nextIndex]?.focus()
+  }
 
-    setOtp(next.join('').slice(0, OTP_LENGTH))
+  const handleMobilePaste = (index, event) => {
+    event.preventDefault()
+    const digits = onlyDigits(event.clipboardData.getData('text'))
+    if (!digits) {
+      return
+    }
+    setMobile(fillDigits(mobile, index, digits, MOBILE_LENGTH))
+    const nextIndex = Math.min(index + digits.length, MOBILE_LENGTH - 1)
+    mobileRefs.current[nextIndex]?.focus()
+  }
+
+  const handleOtpPaste = (index, event) => {
+    event.preventDefault()
+    const digits = onlyDigits(event.clipboardData.getData('text'))
+    if (!digits) {
+      return
+    }
+    setOtp(fillDigits(otp, index, digits, OTP_LENGTH))
     const nextIndex = Math.min(index + digits.length, OTP_LENGTH - 1)
     otpRefs.current[nextIndex]?.focus()
   }
@@ -104,6 +121,7 @@ function LoginAuthSection() {
                   maxLength={1}
                   value={mobile[index] || ''}
                   onChange={(event) => handleMobileChange(index, event.target.value)}
+                  onPaste={(event) => handleMobilePaste(index, event)}
                   onKeyDown={(event) => handleMobileKeyDown(index, event)}
                   aria-label={`Mobile digit ${index + 1}`}
                 />
@@ -148,13 +166,23 @@ function LoginAuthSection() {
                   maxLength={1}
                   value={otp[index] || ''}
                   onChange={(event) => handleOtpChange(index, event.target.value)}
+                  onPaste={(event) => handleOtpPaste(index, event)}
                   onKeyDown={(event) => handleOtpKeyDown(index, event)}
                   aria-label={`OTP digit ${index + 1}`}
                 />
               ))}
             </div>
 
-            <button className="btn btn-primary login-submit-btn" type="button" disabled={!canVerifyOtp}>
+            <button
+              className="btn btn-primary login-submit-btn"
+              type="button"
+              disabled={!canVerifyOtp}
+              onClick={() => {
+                if (canVerifyOtp) {
+                  onNavigate('/dashboard')
+                }
+              }}
+            >
               Verify Otp
             </button>
 

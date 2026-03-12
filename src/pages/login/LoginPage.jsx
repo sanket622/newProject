@@ -1,10 +1,10 @@
 import '../Pages.css'
 import LoginAuthSection from './LoginAuthSection/LoginAuthSection'
 
-function LoginPage() {
+function LoginPage({ onNavigate }) {
   return (
     <section className="inner-page paper-bg">
-      <LoginAuthSection />
+      <LoginAuthSection onNavigate={onNavigate} />
     </section>
   )
 }

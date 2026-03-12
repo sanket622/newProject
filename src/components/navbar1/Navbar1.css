@@ -1,0 +1,41 @@
+.navbar1 {
+  min-height: 84px;
+  border: 1px solid #cdcdcf;
+  border-radius: 26px;
+  background: #f3f3f4;
+  padding: 0.85rem 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.navbar1-brand {
+  width: 148px;
+  height: auto;
+  display: block;
+}
+
+.navbar1-user {
+  border: 0;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  cursor: pointer;
+  color: #1a1a1b;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.05rem;
+}
+
+.navbar1-user img {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  object-fit: cover;
+}
+
+.navbar1-caret {
+  color: #5b298c;
+  font-size: 0.9rem;
+}

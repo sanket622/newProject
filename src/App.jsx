@@ -7,6 +7,12 @@ import AboutPage from './pages/about/AboutPage'
 import ContactPage from './pages/contact/ContactPage'
 import LendingPage from './pages/lending/LendingPage'
 import LoginPage from './pages/login/LoginPage'
+import DashboardPage from './pages/special/dashboard/DashboardPage'
+import AccountPage from './pages/special/account/AccountPage'
+import SupportPage from './pages/special/support/SupportPage'
+import LoanHistoryPage from './pages/special/loanHistory/LoanHistoryPage'
+import TermsPage from './pages/special/terms/TermsPage'
+import PrivacyPage from './pages/special/privacy/PrivacyPage'
 
 const routeMap = {
   '/': HomePage,
@@ -14,6 +20,12 @@ const routeMap = {
   '/contact': ContactPage,
   '/lending': LendingPage,
   '/login': LoginPage,
+  '/dashboard': DashboardPage,
+  '/dashboard/account': AccountPage,
+  '/dashboard/support': SupportPage,
+  '/dashboard/loan-history': LoanHistoryPage,
+  '/dashboard/terms': TermsPage,
+  '/dashboard/privacy': PrivacyPage,
 }
 
 const normalizePath = (path) => {
@@ -30,7 +42,7 @@ const normalizePath = (path) => {
 
 function App() {
   const [currentPath, setCurrentPath] = useState(normalizePath(window.location.pathname))
-  const isLoginPage = currentPath === '/login'
+  const isAuthOrDashboard = currentPath === '/login' || currentPath.startsWith('/dashboard')
 
   useEffect(() => {
     const handlePopState = () => {
@@ -57,11 +69,11 @@ function App() {
 
   return (
     <div className="page-shell">
-      {!isLoginPage ? <Navbar onNavigate={navigate} currentPath={currentPath} /> : null}
+      {!isAuthOrDashboard ? <Navbar onNavigate={navigate} currentPath={currentPath} /> : null}
       <main>
-        <CurrentPage />
+        <CurrentPage onNavigate={navigate} currentPath={currentPath} />
       </main>
-      <Footer onNavigate={navigate} />
+      {!isAuthOrDashboard ? <Footer onNavigate={navigate} /> : null}
     </div>
   )
 }

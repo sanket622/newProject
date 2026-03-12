@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useMemo, useRef, useState } from 'react'
 import './LoginAuthSection.css'
 import maskGroup2 from '../../../assets/Mask group 2.png'
 
@@ -12,6 +12,8 @@ function LoginAuthSection() {
   const [mobile, setMobile] = useState('')
   const [otp, setOtp] = useState('')
   const [consent, setConsent] = useState(false)
+  const mobileRefs = useRef([])
+  const otpRefs = useRef([])
 
   const maskedMobile = useMemo(() => {
     if (mobile.length < MOBILE_LENGTH) {
@@ -21,17 +23,59 @@ function LoginAuthSection() {
   }, [mobile])
 
   const handleMobileChange = (index, value) => {
-    const digit = onlyDigits(value).slice(-1)
+    const digits = onlyDigits(value)
     const next = mobile.split('')
-    next[index] = digit || ''
+
+    if (!digits) {
+      next[index] = ''
+      setMobile(next.join('').slice(0, MOBILE_LENGTH))
+      return
+    }
+
+    digits
+      .slice(0, MOBILE_LENGTH - index)
+      .split('')
+      .forEach((digit, offset) => {
+        next[index + offset] = digit
+      })
+
     setMobile(next.join('').slice(0, MOBILE_LENGTH))
+    const nextIndex = Math.min(index + digits.length, MOBILE_LENGTH - 1)
+    mobileRefs.current[nextIndex]?.focus()
   }
 
   const handleOtpChange = (index, value) => {
-    const digit = onlyDigits(value).slice(-1)
+    const digits = onlyDigits(value)
     const next = otp.split('')
-    next[index] = digit || ''
+
+    if (!digits) {
+      next[index] = ''
+      setOtp(next.join('').slice(0, OTP_LENGTH))
+      return
+    }
+
+    digits
+      .slice(0, OTP_LENGTH - index)
+      .split('')
+      .forEach((digit, offset) => {
+        next[index + offset] = digit
+      })
+
     setOtp(next.join('').slice(0, OTP_LENGTH))
+    const nextIndex = Math.min(index + digits.length, OTP_LENGTH - 1)
+    otpRefs.current[nextIndex]?.focus()
+  }
+
+  const handleMobileKeyDown = (index, event) => {
+    if (event.key === 'Backspace' && !mobile[index] && index > 0) {
+      mobileRefs.current[index - 1]?.focus()
+    }
+  }
+
+  const handleOtpKeyDown = (index, event) => {
+    if (event.key === 'Backspace' && !otp[index] && index > 0) {
+      otpRefs.current[index - 1]?.focus()
+    }
   }
 
   const canGetOtp = mobile.length === MOBILE_LENGTH && consent
@@ -52,11 +96,15 @@ function LoginAuthSection() {
               {Array.from({ length: MOBILE_LENGTH }).map((_, index) => (
                 <input
                   key={`mobile-${index}`}
+                  ref={(node) => {
+                    mobileRefs.current[index] = node
+                  }}
                   type="text"
                   inputMode="numeric"
                   maxLength={1}
                   value={mobile[index] || ''}
                   onChange={(event) => handleMobileChange(index, event.target.value)}
+                  onKeyDown={(event) => handleMobileKeyDown(index, event)}
                   aria-label={`Mobile digit ${index + 1}`}
                 />
               ))}
@@ -92,11 +140,15 @@ function LoginAuthSection() {
               {Array.from({ length: OTP_LENGTH }).map((_, index) => (
                 <input
                   key={`otp-${index}`}
+                  ref={(node) => {
+                    otpRefs.current[index] = node
+                  }}
                   type="text"
                   inputMode="numeric"
                   maxLength={1}
                   value={otp[index] || ''}
                   onChange={(event) => handleOtpChange(index, event.target.value)}
+                  onKeyDown={(event) => handleOtpKeyDown(index, event)}
                   aria-label={`OTP digit ${index + 1}`}
                 />
               ))}

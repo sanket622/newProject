@@ -30,6 +30,7 @@ const normalizePath = (path) => {
 
 function App() {
   const [currentPath, setCurrentPath] = useState(normalizePath(window.location.pathname))
+  const isLoginPage = currentPath === '/login'
 
   useEffect(() => {
     const handlePopState = () => {
@@ -56,7 +57,7 @@ function App() {
 
   return (
     <div className="page-shell">
-      <Navbar onNavigate={navigate} currentPath={currentPath} />
+      {!isLoginPage ? <Navbar onNavigate={navigate} currentPath={currentPath} /> : null}
       <main>
         <CurrentPage />
       </main>

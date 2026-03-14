@@ -30,7 +30,7 @@ function Navbar({ onNavigate, currentPath }) {
         <button className="btn nav-apply-btn" type="button" onClick={() => onNavigate('/login')}>
           Apply Loan
         </button>
-        <button className="btn nav-repay-btn" type="button">
+        <button className="btn nav-repay-btn" type="button" onClick={() => onNavigate('/repay-loan')}>
           Repay Loan
         </button>
       </div>

@@ -6,6 +6,7 @@ import HomePage from './pages/home/HomePage'
 import AboutPage from './pages/about/AboutPage'
 import ContactPage from './pages/contact/ContactPage'
 import LendingPage from './pages/lending/LendingPage'
+import RepayLoanPage from './pages/repayLoan/RepayLoanPage'
 import LoginPage from './pages/login/LoginPage'
 import DashboardPage from './pages/special/dashboard/DashboardPage'
 import AccountPage from './pages/special/account/AccountPage'
@@ -19,6 +20,7 @@ const routeMap = {
   '/about': AboutPage,
   '/contact': ContactPage,
   '/lending': LendingPage,
+  '/repay-loan': RepayLoanPage,
   '/login': LoginPage,
   '/dashboard': DashboardPage,
   '/dashboard/account': AccountPage,

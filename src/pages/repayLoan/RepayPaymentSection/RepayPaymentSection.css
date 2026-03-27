@@ -1,0 +1,127 @@
+.repay-payment-section {
+  padding: 0 0 clamp(2rem, 4vw, 3rem);
+  background-image:
+    radial-gradient(circle at 8px 8px, rgba(255, 255, 255, 0.92) 1px, transparent 1px),
+    linear-gradient(rgba(91, 41, 140, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(91, 41, 140, 0.12) 1px, transparent 1px);
+  background-size: 14px 14px, 86px 86px, 86px 86px;
+}
+
+.repay-payment-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.8rem);
+}
+
+.repay-payment-panel {
+  border: 1px solid #d4d4d7;
+  border-radius: 24px;
+  background: #f7f7f8;
+  overflow: hidden;
+  min-height: 520px;
+}
+
+.repay-payment-header {
+  padding: 1rem 1.25rem;
+  background: #ece8ef;
+  border-bottom: 1px solid #dfdbe3;
+}
+
+.repay-payment-header h2 {
+  margin: 0;
+  color: #111111;
+  text-align: center;
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(1.6rem, 2.2vw, 2.2rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.repay-bank-details {
+  padding: 0 0.75rem;
+}
+
+.repay-bank-row {
+  display: grid;
+  grid-template-columns: minmax(140px, 0.9fr) minmax(0, 1fr);
+  gap: 1.2rem;
+  align-items: center;
+  padding: 1.35rem 0;
+  border-bottom: 1px solid #d8d8db;
+}
+
+.repay-bank-row:last-child {
+  border-bottom: 0;
+}
+
+.repay-bank-row span {
+  color: #66676b;
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+  line-height: 1.25;
+}
+
+.repay-bank-row strong {
+  color: #111111;
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(1.05rem, 1.45vw, 1.22rem);
+  font-weight: 500;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.repay-bank-row:last-child strong {
+  text-transform: none;
+}
+
+.repay-qr-placeholder {
+  min-height: calc(520px - 72px);
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.repay-qr-box {
+  width: min(240px, 70%);
+  aspect-ratio: 1;
+  border-radius: 18px;
+  border: 2px dashed #c8bdd2;
+  background:
+    linear-gradient(90deg, rgba(91, 41, 140, 0.08) 50%, transparent 50%),
+    linear-gradient(rgba(91, 41, 140, 0.08) 50%, transparent 50%);
+  background-size: 24px 24px;
+  background-color: #faf9fb;
+}
+
+.repay-qr-placeholder p {
+  margin: 0;
+  max-width: 340px;
+  color: #66676b;
+  text-align: center;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 980px) {
+  .repay-payment-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .repay-payment-panel {
+    min-height: 0;
+  }
+
+  .repay-qr-placeholder {
+    min-height: 360px;
+  }
+}
+
+@media (max-width: 640px) {
+  .repay-bank-row {
+    grid-template-columns: 1fr;
+    gap: 0.55rem;
+  }
+}
